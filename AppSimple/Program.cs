@@ -10,31 +10,45 @@ namespace AppSimple
 	{
 		static void Main(string[] args)
 		{
-			#region "Boucle "
-			int nbre1 =-1;
-			do
+			#region "Utilisation du is "
+			Console.WriteLine("Entrer un nombre  :");
+			/* Récuperer la valeur saisie au clavier */
+			var elt = Console.ReadLine();
+			if (int.TryParse(elt, out int result))
 			{
-				/* Effacer la console */
-				System.Console.Clear();
-				/* Afiicher le texte à  l'utilisateur */
-				Console.WriteLine("Entrer un nombre positif :");
-				/* Récuperer la valeur saisie au clavier */
-				nbre1 = int.Parse(Console.ReadLine());
-			} while (nbre1 < 0);
-
-			while (nbre1 < 0)
-			{
-				/* Effacer la console */
-				System.Console.Clear();
-				/* Afiicher le texte à  l'utilisateur */
-				Console.WriteLine("Entrer un nombre positif :");
-				/* Récuperer la valeur saisie au clavier */
-				nbre1 = int.Parse(Console.ReadLine());
+				if (result is int)
+					Console.WriteLine("Le nombre entrer est : {0} ", result);
 			}
-			/* Afficher le nombre */
-			Console.WriteLine("Le nombre entrer est : {0} ",
-				nbre1);
+
+			if (elt is string)
+				Console.WriteLine("Le nombre entrer est : {0} ", elt);
+
 			#endregion
+			//#region "Boucle "
+			//int nbre1 =-1;
+			//do
+			//{
+			//	/* Effacer la console */
+			//	System.Console.Clear();
+			//	/* Afiicher le texte à  l'utilisateur */
+			//	Console.WriteLine("Entrer un nombre positif :");
+			//	/* Récuperer la valeur saisie au clavier */
+			//	nbre1 = int.Parse(Console.ReadLine());
+			//} while (nbre1 < 0);
+
+			//while (nbre1 < 0)
+			//{
+			//	/* Effacer la console */
+			//	System.Console.Clear();
+			//	/* Afiicher le texte à  l'utilisateur */
+			//	Console.WriteLine("Entrer un nombre positif :");
+			//	/* Récuperer la valeur saisie au clavier */
+			//	nbre1 = int.Parse(Console.ReadLine());
+			//}
+			///* Afficher le nombre */
+			//Console.WriteLine("Le nombre entrer est : {0} ",
+			//	nbre1);
+			//#endregion
 			//#region "Egalité "
 			//Account a3 = new Account("125");
 			//Account a4 = new Account("125");
