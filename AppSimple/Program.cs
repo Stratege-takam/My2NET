@@ -10,28 +10,53 @@ namespace AppSimple
 	{
 		static void Main(string[] args)
 		{
-			#region "Egalité "
-			Account a3 = new Account("125");
-			Account a4 = new Account("125");
+			#region "Boucle "
+			int nbre1 =-1;
+			do
+			{
+				/* Effacer la console */
+				System.Console.Clear();
+				/* Afiicher le texte à  l'utilisateur */
+				Console.WriteLine("Entrer un nombre positif :");
+				/* Récuperer la valeur saisie au clavier */
+				nbre1 = int.Parse(Console.ReadLine());
+			} while (nbre1 < 0);
 
-			if (a3 == a4)
-				Console.WriteLine("Objects are equal");
-			else
-				Console.WriteLine("Objects are not equal");
-
-
-			if (a3.v.Equals(a4.v))
-				Console.WriteLine("Objects are equal");
-			else
-				Console.WriteLine("Objects are not equal");
-			int X, Y;
-			X = 5;
-			Y = 5;
-			if (X == Y)
-				Console.WriteLine("X == Y");
-			else
-				Console.WriteLine("X != Y");
+			while (nbre1 < 0)
+			{
+				/* Effacer la console */
+				System.Console.Clear();
+				/* Afiicher le texte à  l'utilisateur */
+				Console.WriteLine("Entrer un nombre positif :");
+				/* Récuperer la valeur saisie au clavier */
+				nbre1 = int.Parse(Console.ReadLine());
+			}
+			/* Afficher le nombre */
+			Console.WriteLine("Le nombre entrer est : {0} ",
+				nbre1);
 			#endregion
+			//#region "Egalité "
+			//Account a3 = new Account("125");
+			//Account a4 = new Account("125");
+
+			//if (a3 == a4)
+			//	Console.WriteLine("Objects are equal");
+			//else
+			//	Console.WriteLine("Objects are not equal");
+
+
+			//if (a3.v.Equals(a4.v))
+			//	Console.WriteLine("Objects are equal");
+			//else
+			//	Console.WriteLine("Objects are not equal");
+			//int X, Y;
+			//X = 5;
+			//Y = 5;
+			//if (X == Y)
+			//	Console.WriteLine("X == Y");
+			//else
+			//	Console.WriteLine("X != Y");
+			//#endregion
 			//#region "Type de données"
 			//int A, B;
 			//A = 3;
