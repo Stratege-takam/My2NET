@@ -10,7 +10,45 @@ namespace AppSimple
 	{
 		static void Main(string[] args)
 		{
+			#region "Egalité "
+			Account a3 = new Account("125");
+			Account a4 = new Account("125");
 
+			if (a3 == a4)
+				Console.WriteLine("Objects are equal");
+			else
+				Console.WriteLine("Objects are not equal");
+
+
+			if (a3.v.Equals(a4.v))
+				Console.WriteLine("Objects are equal");
+			else
+				Console.WriteLine("Objects are not equal");
+			int X, Y;
+			X = 5;
+			Y = 5;
+			if (X == Y)
+				Console.WriteLine("X == Y");
+			else
+				Console.WriteLine("X != Y");
+			#endregion
+			//#region "Type de données"
+			//int A, B;
+			//A = 3;
+			//B = A;
+			//A = 5;
+			//Console.WriteLine("A = {0} B = {1} ", A, B);
+
+			//Account account1 = new Account();
+			//Account account2 = account1;
+			//account1.Name = "Simple test";
+			//account2.Password = "Test";
+			//account1.Password = "Other";
+			//Console.WriteLine("account1.Name = {0} account2.Name = {1} ",
+			//	account1.Name, account2.Name);
+			//Console.WriteLine("account1.Password = {0} account2.Password = {1} ",
+			//	account1.Password, account2.Password);
+			//#endregion
 
 			//#region "Surcharge"
 			//	Console.WriteLine("La somme est : {0} ", add());
@@ -20,23 +58,8 @@ namespace AppSimple
 			//	Console.WriteLine("La somme est : {0} ", add(1, 2, 4, 5));
 			//	Console.WriteLine("La somme est : {0} ", add(new int[] { 1, 2, 3, 4, 5, 6 }));
 			//#endregion
-			#region "Type de données"
-			int A, B;
-			A = 3;
-			B = A;
-			A = 5;
-			Console.WriteLine("A = {0} B = {1} ", A, B);
 
-			Account account1 = new Account();
-			Account account2 = account1;
-			account1.Name = "Simple test";
-			account2.Password = "Test";
-			account1.Password = "Other";
-			Console.WriteLine("account1.Name = {0} account2.Name = {1} ",
-				account1.Name, account2.Name);
-			Console.WriteLine("account1.Password = {0} account2.Password = {1} ",
-				account1.Password, account2.Password);
-			#endregion
+
 			Console.ReadKey();
 		}
 
@@ -64,6 +87,13 @@ namespace AppSimple
 
 	internal class Account
 	{
+		public string v;
+
+		public Account(string v)
+		{
+			this.v = v;
+		}
+
 		public string Name { get; internal set; }
 		public string Password { get; internal set; }
 	}
