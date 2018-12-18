@@ -42,9 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPerson.cs" />
     <Compile Include="Name213346.cs" />
     <Compile Include="Name213347.cs" />
     <Compile Include="NameOrFirstName.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="PersonDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
