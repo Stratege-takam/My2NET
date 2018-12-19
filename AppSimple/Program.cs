@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-
+using System.Linq;
 namespace AppSimple
 {
 	class Program
@@ -13,26 +13,80 @@ namespace AppSimple
 		static void Main(string[] args)
 		{
 
-			List<string> MyList = new List<string>()
+			#region "LINQ"
+			List<Student> students = new List<Student>()
 			{
-				"Thomas",
-				"Morange",
-				"Maxime",
-				"Jason"
+				new Student(){ Firstname= "maxime",Name = "Siguier",
+					Id = 1, BirthOfDate= DateTime.Now,
+					Gender = 'F',  Rating= 20   },
+
+				new Student(){ Firstname= "amaury",Name = "Morange",
+					Id = 2, BirthOfDate= null,
+					Gender = 'M',  Rating= 30   },
+
+				new Student(){ Firstname= "thomas",Name = "Jasmin",
+					Id = 3, BirthOfDate= null,
+					Gender = 'F',  Rating= 47.5  },
+
+				new Student(){ Firstname= "fabien",Name = "Kremer",
+					Id = 4, BirthOfDate= DateTime.Now,
+					Gender = 'F',  Rating= 7.5  },
+
+				new Student(){ Firstname= "gael",Name = "Prun",
+					Id = 5, BirthOfDate= DateTime.Now,
+					Gender = 'M',  Rating= 35  },
+
+				new Student(){ Firstname= "jason",Name = "Sejean",
+					Id = 6, BirthOfDate=null,
+					Gender = 'M',  Rating= 12.5  },
 			};
-			MyList.AddRange(new List<string>() {
-				"Gael",
-				"Fabien",
-				"Felix"});
 
-			MyList.Add("Danick");
 
-			foreach (var name in MyList.SortByLastLetter())
+			var l = from Student in students
+					where Student.BirthOfDate != null && 
+					Student.Firstname.Contains("n")
+					orderby Student.Id descending
+					select 
+					Student.Fullname.ToUpper();
+			Console.WriteLine("Première méthode");
+			foreach( var name in l)
 			{
 				Console.WriteLine(name);
 			}
 
+			var l2 = students
+				.Where(student => student.BirthOfDate != null
+			&& student.Firstname.Contains("n")
+			).OrderByDescending(s => s.Id)
+			.Select(st => st.Fullname.ToUpper());
+			Console.WriteLine("Deuxième méthode");
+			foreach (var name in l)
+			{
+				Console.WriteLine(name);
+			}
+			#endregion
 
+			//#region "Utilisation des listes"
+			//List<string> MyList = new List<string>()
+			//{
+			//	"Thomas",
+			//	"Morange",
+			//	"Maxime",
+			//	"Jason"
+			//};
+			//MyList.AddRange(new List<string>() {
+			//	"Gael",
+			//	"Fabien",
+			//	"Felix"});
+
+			//MyList.Add("Danick");
+
+			//foreach (var name in MyList.SortByLastLetter())
+			//{
+			//	Console.WriteLine(name);
+			//}
+
+			//#endregion
 
 			//#region "CompareTo"
 			//string chaine1 = "test";
