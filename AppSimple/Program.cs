@@ -8,22 +8,34 @@ namespace AppSimple
 {
 	class Program
 	{
+		public override string ToString()
+		{
+			return this.Name;
+		}
+		public string Name { get; set; }
 		static void Main(string[] args)
 		{
-			#region "Utilisation du is "
-			Console.WriteLine("Entrer un nombre  :");
-			/* Récuperer la valeur saisie au clavier */
-			var elt = Console.ReadLine();
-			if (int.TryParse(elt, out int result))
+
+			Program program1 = new Program()
 			{
-				if (result is int)
-					Console.WriteLine("Le nombre entrer est : {0} ", result);
-			}
+				Name = " Test simple"
+			};
+			Console.WriteLine(program1);
 
-			if (elt is string)
-				Console.WriteLine("Le nombre entrer est : {0} ", elt);
+			//#region "Utilisation du is "
+			//Console.WriteLine("Entrer un nombre  :");
+			///* Récuperer la valeur saisie au clavier */
+			//var elt = Console.ReadLine();
+			//if (int.TryParse(elt, out int result))
+			//{
+			//	if (result is int)
+			//		Console.WriteLine("Le nombre entrer est : {0} ", result);
+			//}
 
-			#endregion
+			//if (elt is string)
+			//	Console.WriteLine("Le nombre entrer est : {0} ", elt);
+
+			//#endregion
 			//#region "Boucle "
 			//int nbre1 =-1;
 			//do
