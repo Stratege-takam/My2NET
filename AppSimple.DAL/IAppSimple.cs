@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppSimple.DAL
 {
-    public class Class1
-    {
-    }
+	interface IAppSimple
+	{
+	}
 }

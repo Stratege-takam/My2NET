@@ -1,30 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AppSimple.BO
 {
-	public class Student
+	public class Student:Person
 	{
-		public int Id { get; set; }
-		public DateTime? BirthOfDate { get; set; }
-		public string Name { get; set; }
-		public char Gender { get; set; }
-		public string Firstname { get; set; }
-		public double Rating { get; set; }
+		
+		public double? Rating { get; set; }
 
-		public string Fullname => string.Format("{0} {1}", this.Firstname, this.Name);
+		[Required]
+		public int CampusId { get; set; }
 
+		[Required]
+		public int ClassRoomId { get; set; }
+
+		public ClassRoom ClassRoom { get; set; }
 
 		public override string ToString()
 		{
-			return 
-		string.Format("Id = {0} \n Name = {1} \n Firstname : {2}  \n Rating = {3}",
-		this.Id, this.Name, this.Firstname, this.Rating);
+			return "";
 		}
 
+
+		public override void ShowStatus()
+		{
+			Console.WriteLine(this.GetStatus());
+		}
+
+		public override string GetStatus()
+		{
+			return string.Format("I am a {0}", base.GetStatus());
+		}
 
 		public static void ShowMenu()
 		{
@@ -35,6 +45,17 @@ namespace AppSimple.BO
 			Console.WriteLine("\t\t\t 4) Consulter la liste des étudiant ");
 			Console.WriteLine("\t\t\t 5) Retourner au menu principal ");
 			Console.WriteLine("\t\t--------------------------------------------");
+		}
+
+
+		public static void Display(IEnumerable<Student> Students)
+		{
+			int i = 1;
+			foreach (var item in Students)
+			{
+				Console.WriteLine("{0}) CampusId = {1} ,  {2}", i,item.CampusId, item.Fullname);
+				i++;
+			}
 		}
 
 	}
