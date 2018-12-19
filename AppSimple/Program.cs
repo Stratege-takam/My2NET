@@ -15,19 +15,41 @@ namespace AppSimple
 		public string Name { get; set; }
 		static void Main(string[] args)
 		{
-			#region "Exception "
+
+			#region "Using and throw new exception "
 			try
 			{
-				Console.Write("Entrer un nombre : ");
-				int nombre = int.Parse(Console.ReadLine());
-				Console.Write(nombre);
+				Console.Write("Entrer un montant : ");
+				int amount = int.Parse(Console.ReadLine());
+				//using(var bank1 = new Bank())
+				//{
+				//	bank1.Deposit(amount);
+				//	Console.Write(bank1.Compte);
+				//}
+				Bank bank1 = new Bank();
+				bank1.Deposit(amount);
+				Console.Write(bank1.Compte);
+
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
-				Console.WriteLine("Vous n'avez pas entré un nombre");
+				Console.WriteLine(ex.Message);
 			}
-			
+
 			#endregion
+			//#region "Exception "
+			//try
+			//{
+			//	Console.Write("Entrer un nombre : ");
+			//	int nombre = int.Parse(Console.ReadLine());
+			//	Console.Write(nombre);
+			//}
+			//catch (Exception)
+			//{
+			//	Console.WriteLine("Vous n'avez pas entré un nombre");
+			//}
+
+			//#endregion
 			//#region "Instance de la class"
 			//Program program1 = new Program()
 			//{
