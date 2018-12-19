@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppSimple
 {
@@ -16,11 +13,48 @@ namespace AppSimple
 		static void Main(string[] args)
 		{
 
-			#region "Les extensions de type"
-			double nombre = 4;
-			Console.WriteLine("{0}! = {1}", nombre,
-				nombre.factoriel());
-			#endregion
+			List<string> MyList = new List<string>()
+			{
+				"Thomas",
+				"Morange",
+				"Maxime",
+				"Jason"
+			};
+			MyList.AddRange(new List<string>() {
+				"Gael",
+				"Fabien",
+				"Felix"});
+
+			MyList.Add("Danick");
+
+			foreach (var name in MyList.SortByLastLetter())
+			{
+				Console.WriteLine(name);
+			}
+
+
+
+			//#region "CompareTo"
+			//string chaine1 = "test";
+			//string chaine2 = "toto";
+			//if (chaine1.CompareTo(chaine2) == 0)
+			//{
+			//	// egale
+			//}
+			//else if (chaine1.CompareTo(chaine2) > 0)
+			//{
+			//	// chaine1  est plus grande 
+			//}
+			//else
+			//{
+			//	// chaine1  est inferieur 
+			//}
+			//#endregion
+			//#region "Les extensions de type"
+			//double nombre = 4;
+			//Console.WriteLine("{0}! = {1}", nombre,
+			//	nombre.factoriel());
+			//#endregion
 
 			//#region "Using and throw new exception "
 			//try
