@@ -16,27 +16,33 @@ namespace AppSimple
 		static void Main(string[] args)
 		{
 
-			#region "Using and throw new exception "
-			try
-			{
-				Console.Write("Entrer un montant : ");
-				int amount = int.Parse(Console.ReadLine());
-				//using(var bank1 = new Bank())
-				//{
-				//	bank1.Deposit(amount);
-				//	Console.Write(bank1.Compte);
-				//}
-				Bank bank1 = new Bank();
-				bank1.Deposit(amount);
-				Console.Write(bank1.Compte);
-
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine(ex.Message);
-			}
-
+			#region "Les extensions de type"
+			double nombre = 4;
+			Console.WriteLine("{0}! = {1}", nombre,
+				nombre.factoriel());
 			#endregion
+
+			//#region "Using and throw new exception "
+			//try
+			//{
+			//	Console.Write("Entrer un montant : ");
+			//	int amount = int.Parse(Console.ReadLine());
+			//	//using(var bank1 = new Bank())
+			//	//{
+			//	//	bank1.Deposit(amount);
+			//	//	Console.Write(bank1.Compte);
+			//	//}
+			//	Bank bank1 = new Bank();
+			//	bank1.Deposit(amount);
+			//	Console.Write(bank1.Compte);
+
+			//}
+			//catch (Exception ex)
+			//{
+			//	Console.WriteLine(ex.Message);
+			//}
+
+			//#endregion
 			//#region "Exception "
 			//try
 			//{

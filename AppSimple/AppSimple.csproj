@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bank.cs" />
+    <Compile Include="Extension.cs" />
     <Compile Include="IPerson.cs" />
     <Compile Include="Name213346.cs" />
     <Compile Include="Name213347.cs" />
