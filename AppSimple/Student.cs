@@ -21,8 +21,8 @@ namespace AppSimple
 		public override string ToString()
 		{
 			return 
-		string.Format("Id = {0} \n Name = {1} \n Time : {2}  \n Rating = {3}",
-		this.Id, this.Name, this.Time, this.Rating);
+		string.Format("Id = {0} \n Name = {1} \n Firstname : {2}  \n Rating = {3}",
+		this.Id, this.Name, this.Firstname, this.Rating);
 		}
 
 	}
