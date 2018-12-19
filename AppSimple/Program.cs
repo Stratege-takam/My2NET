@@ -15,12 +15,26 @@ namespace AppSimple
 		public string Name { get; set; }
 		static void Main(string[] args)
 		{
-
-			Program program1 = new Program()
+			#region "Exception "
+			try
 			{
-				Name = " Test simple"
-			};
-			Console.WriteLine(program1);
+				Console.Write("Entrer un nombre : ");
+				int nombre = int.Parse(Console.ReadLine());
+				Console.Write(nombre);
+			}
+			catch (Exception)
+			{
+				Console.WriteLine("Vous n'avez pas entré un nombre");
+			}
+			
+			#endregion
+			//#region "Instance de la class"
+			//Program program1 = new Program()
+			//{
+			//	Name = " Test simple"
+			//};
+			//Console.WriteLine(program1);
+			//#endregion
 
 			//#region "Utilisation du is "
 			//Console.WriteLine("Entrer un nombre  :");
