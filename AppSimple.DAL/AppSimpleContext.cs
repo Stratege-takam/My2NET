@@ -1,5 +1,6 @@
-namespace AppSimple
+namespace AppSimple.DAL
 {
+	using AppSimple.BO;
 	using System;
 	using System.Data.Entity;
 	using System.Linq;
@@ -21,6 +22,10 @@ namespace AppSimple
 		// on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
 		// public virtual DbSet<MyEntity> MyEntities { get; set; }
+		public virtual DbSet<Person> People { get; set; }
+		public virtual DbSet<ClassRoom> ClassRooms { get; set; }
+		public virtual DbSet<Student> Students { get; set; }
+		public virtual DbSet<Professor> Professors { get; set; }
 	}
 
 	//public class MyEntity

@@ -46,12 +46,6 @@ namespace AppSimple.BO
 			return "Person";
 		}
 
-		public static void Display(IEnumerable<Person> people)
-		{
-			foreach (var item in people)
-			{
-				Console.WriteLine(item);
-			}
-		}
+	
 	}
 }

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace AppSimple.DAL
 {
-	interface IAppSimple
+	public interface IAppSimple<T>
 	{
+		T Add(T obj);
+		T Edit(T obj);
+		void Remove(T obj);
+
+		IEnumerable<T> FindAll();
 	}
 }

@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chat.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="ClassRoom.cs" />
     <Compile Include="Professor.cs" />

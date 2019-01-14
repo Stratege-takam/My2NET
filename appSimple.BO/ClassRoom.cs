@@ -34,5 +34,16 @@ namespace AppSimple.BO
 			Console.WriteLine("\t\t\t 6) Retourner au menu principal ");
 			Console.WriteLine("\t\t--------------------------------------------");
 		}
+
+
+		public static void Display(IEnumerable<ClassRoom> ClassRooms)
+		{
+			int i = 1;
+			foreach (var item in ClassRooms)
+			{
+				Console.WriteLine("{0}) {1} ", i, item);
+				i++;
+			}
+		}
 	}
 }

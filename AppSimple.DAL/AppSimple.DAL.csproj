@@ -48,12 +48,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AppSimpleContext.cs" />
+    <Compile Include="IAppSimple.cs" />
+    <Compile Include="Migrations\201812191734294_1.cs" />
+    <Compile Include="Migrations\201812191734294_1.Designer.cs">
+      <DependentUpon>201812191734294_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\appSimple.BO\AppSimple.BO.csproj">
+      <Project>{ba1d5d76-ef1c-4479-9dc4-918ee6300726}</Project>
+      <Name>AppSimple.BO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812191734294_1.resx">
+      <DependentUpon>201812191734294_1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
