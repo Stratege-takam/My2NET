@@ -10,7 +10,7 @@ namespace ChatServerCS
     {
         static void Main(string[] args)
         {
-            var url = "http://localhost:8080/";
+            var url = "http://192.168.1.254:8080/";
             using (WebApp.Start<Startup>(url))
             {
                 Console.WriteLine($"Server running at {url}");
