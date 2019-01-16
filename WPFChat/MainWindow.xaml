@@ -13,18 +13,22 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <StackPanel
-            Name="stckMessageList" Grid.Row="0" Grid.Column="0"
+        <ListView Margin="2 2 10 2" Grid.Column="0" Grid.Row="0" Grid.RowSpan ="2">
+            
+        </ListView>
+        <StackPanel Margin="2" Background="Beige" 
+            Name="stckMessageList" Grid.Row="0" Grid.Column="1"
                     Grid.ColumnSpan="2" />
-        <StackPanel Grid.Row="1" Grid.Column="0">
-            <TextBox Name="txtMessage" KeyUp="txtMessage_KeyUp" />
+        <StackPanel   Margin="2" Grid.Row="1" Grid.Column="1">
+            <TextBox Padding="4" TextWrapping="Wrap" Name="txtMessage" KeyUp="txtMessage_KeyUp" />
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-            <Button  Name="BtnAdd" Content="Add" Click="BtnAdd_Click" />
-            <Button Margin="10 0 0 0" Click="BtnClear_Click"
-                    Name="BtnClear" Content="Clear" />
+        <StackPanel Margin="2" Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
+            <Button Background="Green" Padding="4" Foreground="White"  Name="BtnAdd" Content="Add" Click="BtnAdd_Click" />
+            <Button Background="Red" Padding="4" Foreground="White" Margin="10 0 0 0" Click="BtnClear_Click"
+                    Name="BtnClear" Content="Clea" />
         </StackPanel>
        
 

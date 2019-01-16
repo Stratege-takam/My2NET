@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfResources.Page1Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfResources"
+        mc:Ignorable="d"
+        Title="Page1Window" Height="450" Width="800">
+    <Grid>
+        <Button Content="Go to page 2"  Name="BtnClick" Click="BtnClick_Click"/>
+        <!--<TextBlock Style="{StaticResource TextBlockStyle}" >
+            <Hyperlink Name="HypButton" Click="HypButton_Click" >
+                Page 1
+            </Hyperlink>
+        </TextBlock>-->
+        
+      
+    </Grid>
+</Window>
